@@ -23,10 +23,7 @@
 			};
       
       
-      
-      
-      
-      var is_static_map = true;
+      var is_static_map = false;
 var client_data = { 
     'dvm_client_id': DVM_map_params["client_id"],
     'domain_name': document.domain,
@@ -43,7 +40,7 @@ var client_data = {
     
 };
 console.log('API_map_called_with_success');
-console.log(client_data);
+
 $.ajax({
     url: 'https://dynamicvenuemaps.com/maps/svg_ajax/check_client_barry.php',
     data: client_data,
@@ -52,6 +49,7 @@ $.ajax({
     dataType: 'jsonp'
 }).done(function (data) {
     alert(data);
+	console.log(data: data);
 });
       
       
