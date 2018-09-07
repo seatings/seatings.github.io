@@ -28,48 +28,9 @@ var DVM_map_params = {
 'tickets_type':'json',
 'static_map':''
 };
-
-      
-    
-      var is_static_map = true;
-var client_data = { 
-    'dvm_client_id': DVM_map_params["client_id"],
-    'domain_name': document.domain,
-    'headliner_id':DVM_map_params['headliner_id'],
-    'feed_type': DVM_map_params['feed_type'],
-    'venue_id': DVM_map_params['venue_id'],
-    'static_map': DVM_map_params['static_map'],
-    'event_id': DVM_map_params['event_id'],
-    'displaySection': DVM_map_params['displaySection'],
-    'venue_conf': DVM_map_params['venue_conf'],
-    'eid': DVM_map_params['eid'],
-    'hash': '69956f',
-    'dvm_injection_details': 'DVM_map_params : client_id : ' + DVM_map_params['client_id'] + ' - tickets_url : ' + DVM_map_params['tickets_url'] + ' - tickets_url_type : ' + DVM_map_params['tickets_url_type']
-    
-};
-console.log('API_map_called_with_success');
-
-$.ajax({
-    url: 'https://dynamicvenuemaps.com/maps/svg_ajax/check_client_barry.php',
-    data: client_data,
-    type: 'GET',
-    contentType: 'jsonp',
-    dataType: 'jsonp'
-}).done(function (data) {
-    alert(data);
-	console.log('data:', data);
-});
-      
-      
- 
-			</script>
+</script>
                                                                                                                                                                                                                             <!--script src="https://maps.dynamicvenuemaps.com/DVM_maps/js/jquery.min.js?v=1.9.1"></script-->
      
- <script src="https://dynamicvenuemaps.com/maps/dvm.js?v=1.0"></script>
+<script src="https://dynamicvenuemaps.com/maps/dvm.js?v=1.0"></script>
 
- 
- 
- <script src="dvm_clientside.js?v=1.0"></script>
- <script type="text/javascript">
- console.log('DVM_map_params: ', DVM_map_params);
- </script>
+<script src="dvm_clientside.js?v=1.0"></script>
