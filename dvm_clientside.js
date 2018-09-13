@@ -3,7 +3,7 @@ function client_dvm_initialize_filters_inputs() {
     $("#filter_qty").val(""), $("#filter_min_price").val(""), $("#filter_max_price").val("")
 }
 function sel_tri(t,v) {
-    alert(v.value);
+    alert('выбран билет: ', v.value);
 //  vtri = document.getElementById("formlist").elements.seltri.value,
 //          param = "EventID=" + t + "&tri=" + vtri, sortqty = document.getElementById("formlist").elements.qtytri2.value,
 //          sortminp = document.getElementById("formlist").elements.minprice2.value,
