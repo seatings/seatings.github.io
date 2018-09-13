@@ -1,36 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Evenz seatingchart</title>
+
+        <link rel="stylesheet" href="https://dynamicvenuemaps.com/maps/css/style_maps.css" />
+        <script src="https://dynamicvenuemaps.com/maps/js/jquery.min.js?v=1.9.1"></script>	 
+    </head>
+    <body>
+
+        <div id="seatmap-container"></div>
+        <div id="eatmap-container-key"></div>
+        <div id="tickets-container"></div>
+
+
+        <script type="text/javascript">
+            var  map_width = 777;
+            var  map_height = 637;
+            
+            var DATA_TICKTES = {"list":[]}
+            var DVM_map_params = {
+                'client_id'             : '158',
+                'map_name'              : 'seatmap-container',
+                'key_map_name'          : 'seatmap-container-key',
+                'tickets_container'     : 'tickets-container',
+                'map_width'             : 777,
+                'map_height'            : 637,	
+                'feed_type'             : 'te',
+                'map_type'              : 'price',
+                'event_id'              : '1413508',
+                'headliner_id'          : '30584',
+                'venue_id'              : '1480',
+                'venue_conf'            : '20651',
+                'tickets_data_object'   : DATA_TICKTES,
+                'tickets_type'          : 'json',
+                'static_map'            : null
+            };
+        </script>
+
+        <script src="https://dynamicvenuemaps.com/maps/dvm.js?v=1.0"></script>
+
+        <script src="dvm_clientside.js?v=1.0"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
 <div id="MY_MAP"></div>    
 <div id="map_key"></div>    
 
 <!--div id="TICKETS_^^^___CONTAINER"></div-->    
-
-                                                                                                                                                                     
-<link rel="stylesheet" href="https://dynamicvenuemaps.com/maps/css/style_maps.css" />
-<script src="https://dynamicvenuemaps.com/maps/js/jquery.min.js?v=1.9.1"></script>	 
-<script type="text/javascript">
-var  map_width =777;
-var  map_height =637;
-
-var DATA_TICKTES = {"list":[]}
-var DVM_map_params = {
-'client_id':'158',
-'map_name':'MY_MAP',
-'key_map_name':'map_key',
-'tickets_container':'TICKETS_CONTAINER',
-'map_width':777,
-'map_height':637,	
-'feed_type':'te',
-'map_type' : 'price',
-'event_id':'1413508',
-'headliner_id':'30584',
-'venue_id':'1480',
-'venue_conf':'20651',
-'tickets_data_object': DATA_TICKTES,
-'tickets_type':'json',
-'static_map':''
-};
-</script>
-                                                                                                                                                                                                                            <!--script src="https://maps.dynamicvenuemaps.com/DVM_maps/js/jquery.min.js?v=1.9.1"></script-->
-     
-<script src="https://dynamicvenuemaps.com/maps/dvm.js?v=1.0"></script>
-
-<script src="dvm_clientside.js?v=1.0"></script>
