@@ -4,6 +4,7 @@ function client_dvm_initialize_filters_inputs() {
 }
 function sel_tri(t,v) {
     alert('выбран билет: ', v.value);
+	console.log('выбран билет: ');
 //  vtri = document.getElementById("formlist").elements.seltri.value,
 //          param = "EventID=" + t + "&tri=" + vtri, sortqty = document.getElementById("formlist").elements.qtytri2.value,
 //          sortminp = document.getElementById("formlist").elements.minprice2.value,
