@@ -1,5 +1,5 @@
 // Создаю websocket-соеденеие со стороны Web
-const ioWebSeatmap = io.connect('http://localhost:3000/client-api/web/seatmap');
+const ioWebSeatmap = io.connect('http://api.evenz.co/client-api/web/seatmap');
 
 // Принимаю данные для запроса к Ticketevolution со стороны Сервера
 ioWebSeatmap.on("event-data-from-server", function(data) {
