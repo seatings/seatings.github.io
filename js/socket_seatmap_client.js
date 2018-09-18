@@ -5,13 +5,35 @@ const ioWebSeatmap = io.connect('http://api.evenz.co/client-api/web/seatmap');
 ioWebSeatmap.on("event-data-from-server", function(data) {
 
     // Список белетов получинный из api Ticketevolution
-    /*const ticketList = [
-        { ticket: 1 },
-        { ticket: 2 },
-        { ticket: 3 }
-    ];*/
-
-    const ticketList = "Hello from seatmap.evenz.co";
+    const ticketList = [
+        {
+            "id": "1858306",
+            "price": "72.0",
+            "section": "PR15",
+            "row": "5",
+            "avail": "2",
+            "qty": "5",
+            "notes": "rien"
+        },
+        {
+            "id": "1858307",
+            "price": "62.0",
+            "section": "PR15",
+            "row": "6",
+            "avail": "2",
+            "qty": "2",
+            "notes": "rien"
+        },
+        {
+            "id": "1858307",
+            "price": "82.0",
+            "section": "PR15",
+            "row": "4",
+            "avail": "1",
+            "qty": "4",
+            "notes": "rien"
+        },
+    ];
 
     // Отправляю полученный список белетов из Web на Cервер 
     ioWebSeatmap.emit("tickets-list-from-web", ticketList);
