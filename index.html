@@ -16,7 +16,7 @@
 </head>
 
     <body>
-        <h1>***</h1>
+        <h1>****</h1>
         <div id="seatmap-container"></div>
         <div id="seatmap-container-key"></div>
         <div id="tickets-container"></div>
@@ -26,6 +26,30 @@
                 "list": []
             };
 
+            // {"list":[]};
+            var DVM_map_params = {
+                'client_id'             : '158',
+                'map_name'              : 'seatmap-container',
+                'key_map_name'          : 'seatmap-container-key',
+                'tickets_container'     : 'tickets-container',
+                'map_width'             : 777,
+                'map_height'            : 637,
+                'feed_type'             : 'te',
+                'map_type'              : 'price',
+                'event_id'              : '1413508',
+                'headliner_id'          : '30584',
+                'venue_id'              : '1480',
+                'venue_conf'            : '20651',
+                'tickets_data_object'   : DATA_TICKTES,
+                'tickets_type'          : 'json',
+                'static_map'            : ''
+            };
+        </script>
+
+
+        <script src="https://dynamicvenuemaps.com/maps/dvm.js?v=1.0"></script>
+
+        <script>
             let dataTickets = [
                 { "id": "1858306", "price": "72.0", "section": "PR15", "row": "4", "avail": "2", "qty": "2", "notes": "rien" },
                 { "id": "1858302", "price": "76.0", "section": "PR15", "row": "3", "avail": "2", "qty": "2", "notes": "rien" }, 
@@ -303,41 +327,12 @@
                 { "id": "499918560", "price": "28.0", "section": "332", "row": "9", "avail": "1,2,3,4,5,6,8", "qty": "8", "notes": "rien" }
             ];
 
-
-
             function setDataTickets(dataTickets) {
                 DATA_TICKTES.list = dataTickets;
             }
 
-
-
             setDataTickets(dataTickets);
-
-            
-            // {"list":[]};
-            var DVM_map_params = {
-                'client_id'             : '158',
-                'map_name'              : 'seatmap-container',
-                'key_map_name'          : 'seatmap-container-key',
-                'tickets_container'     : 'tickets-container',
-                'map_width'             : 777,
-                'map_height'            : 637,
-                'feed_type'             : 'te',
-                'map_type'              : 'price',
-                'event_id'              : '1413508',
-                'headliner_id'          : '30584',
-                'venue_id'              : '1480',
-                'venue_conf'            : '20651',
-                'tickets_data_object'   : DATA_TICKTES,
-                'tickets_type'          : 'json',
-                'static_map'            : ''
-            };
         </script>
-
-
-        <script src="https://dynamicvenuemaps.com/maps/dvm.js?v=1.0"></script>
-        <!--<script src="js/dvm_clientside.js?v=1.0"></script>-->
-
     </body>
 
 </html>
