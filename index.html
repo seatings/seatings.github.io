@@ -16,11 +16,10 @@
 </head>
 
     <body>
-        <h1>*** ****</h1>
         <div id="seatmap-container"></div>
         <div id="seatmap-container-key"></div>
         <div id="tickets-container"></div>
-
+        
         <script>
             var DATA_TICKTES = {
                 "list": []
@@ -48,26 +47,27 @@
         <script src="https://dynamicvenuemaps.com/maps/dvm.js?v=1.0"></script>
 
         <script>
-
-            class Seatmap {
+            class Stadium {
 
                 static setSeatmap(ticketList) {
                     DATA_TICKTES.list = ticketList;
                 }
 
+                // How to call a function for drawing colored sections on top of an empty stadium?
                 static updateSeatmap() {
-                    // How to start updating the map with a new list of tickets?
-                    // As I understand it is required to call a function from a file
+
+                    // ... call function from api dynamicvenuemaps.com
+
+                    // As I understand it is required to call a function from a js-file:
                     // https://dynamicvenuemaps.com/maps/dvm.js?v=1.0
+                    // But I dont find it.
                 }
 
             }
 
 
-
-            // Test
-
-            let ticketList1 = [
+            // 1. After each sorting, the list of tickets will be different 
+            let ticketList = [
                 { "id": "1858306", "price": "72.0", "section": "PR15", "row": "4", "avail": "2", "qty": "2", "notes": "rien" },
                 { "id": "1858302", "price": "76.0", "section": "PR15", "row": "3", "avail": "2", "qty": "2", "notes": "rien" }, 
                 { "id": "1858298", "price": "113.0", "section": "PR15", "row": "1", "avail": "2", "qty": "2", "notes": "rien" }, 
@@ -77,45 +77,11 @@
                 { "id": "1845517", "price": "117.0", "section": "PR13", "row": "1", "avail": "2,4", "qty": "4", "notes": "rien" }
             ];
 
-            let ticketList2 = [
-                { "id": "1821352", "price": "108.0", "section": "PR6", "row": "1", "avail": "2", "qty": "2", "notes": "rien" }, 
-                { "id": "1821350", "price": "1080.0", "section": "SUITE B 23", "row": "12 PERSON", "avail": "1", "qty": "1", "notes": "rien" }, 
-                { "id": "1821349", "price": "1260.0", "section": "SUITE B 20", "row": "12 PERSON", "avail": "1", "qty": "1", "notes": "rien" }, 
-                { "id": "1820571", "price": "1620.0", "section": "SUITE B 23", "row": "18 PERSON", "avail": "1", "qty": "1", "notes": "rien" }, 
-                { "id": "1820568", "price": "1890.0", "section": "SUITE B 20", "row": "18 PERSON", "avail": "1", "qty": "1", "notes": "rien" }, 
-                { "id": "483437683", "price": "2212.0", "section": "Suite C 30", "row": "ALL18TIX", "avail": "1", "qty": "1", "notes": "rien" }, 
-                { "id": "447675932", "price": "1250.0", "section": "Suite C 23", "row": "18 Person", "avail": "1", "qty": "1", "notes": "rien" }, 
-            ];
+            // 2. And after each sorting I need change the value of the "var DATA_TICKTES = ..."
+            Stadium.setSeatmap(ticketList); 
 
-            let ticketList3 = [
-                { "id": "461340353", "price": "255.0", "section": "FLOOR 2", "row": "8", "avail": "2,4", "qty": "4", "notes": "rien" }, 
-                { "id": "447979556", "price": "242.0", "section": "102", "row": "8", "avail": "1,2,3,4,5,6,8", "qty": "8", "notes": "rien" }, 
-                { "id": "447979561", "price": "204.0", "section": "301", "row": "3", "avail": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,16", "qty": "16", "notes": "rien" }, 
-                { "id": "455663500", "price": "203.0", "section": "102", "row": "1", "avail": "1,2,3,5", "qty": "5", "notes": "rien" }, 
-                { "id": "488310113", "price": "185.0", "section": "4 PREMIER", "row": "1", "avail": "2,4", "qty": "4", "notes": "rien" }, 
-                { "id": "487891614", "price": "180.0", "section": "101", "row": "1", "avail": "2", "qty": "2", "notes": "rien" }, 
-                { "id": "455663499", "price": "179.0", "section": "119", "row": "1", "avail": "2", "qty": "2", "notes": "rien" }, 
-            ];
-            
-            // начать повторы с интервалом 2 сек
-            var timerId = setInterval(function() {
-                alert( "тик" );
-            }, 2000);
-            
-            // через 5 сек остановить повторы
-            setTimeout(function() {
-                clearInterval(timerId);
-                alert( 'стоп' );
-            }, 5000);
-
-
-            setTimeout("alert('Привет1')", 3000);
-            setTimeout("alert('Привет2')", 3000);
-            setTimeout("alert('Привет3')", 3000);
-
-            Seatmap.setDataTickets(ticketList1);
-            Seatmap.setDataTickets(ticketList2);
-            Seatmap.setDataTickets(ticketList3);
+            // 3. After that I need to update the map with new ticketList
+            Stadium.updateSeatmap();
 
         </script>
     </body>
