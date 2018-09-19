@@ -7,19 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Evenz seatingchart</title>
 
+    <!-- dynamicvenuemaps.com -->
     <link rel="stylesheet" href="https://dynamicvenuemaps.com/maps/css/style_maps.css" />
     <script src="https://dynamicvenuemaps.com/maps/js/jquery.min.js?v=1.9.1"></script>
-
+    
+    <!-- Our code -->
     <script src="js/socket.io.js"></script>
     <script src="js/socket_seatmap_client.js"></script>
 
 </head>
 
     <body>
+        <!-- dynamicvenuemaps.com -->
         <div id="seatmap-container"></div>
-        <div id="seatmap-container-key"></div>
-        <div id="tickets-container"></div>
-        
+
+        <!-- dynamicvenuemaps.com -->
         <script>
             var DATA_TICKTES = {
                 "list": []
@@ -28,8 +30,8 @@
             var DVM_map_params = {
                 'client_id'             : '158',
                 'map_name'              : 'seatmap-container',
-                'key_map_name'          : 'seatmap-container-key',
-                'tickets_container'     : 'tickets-container',
+                'key_map_name'          : null,
+                'tickets_container'     : null,
                 'map_width'             : 777,
                 'map_height'            : 637,
                 'feed_type'             : 'te',
@@ -44,8 +46,10 @@
             };
         </script>
 
+        <!-- dynamicvenuemaps.com -->
         <script src="https://dynamicvenuemaps.com/maps/dvm.js?v=1.0"></script>
 
+        <!-- Our code -->
         <script>
             class Stadium {
 
@@ -66,7 +70,7 @@
             }
 
 
-            // 1. After each sorting, the list of tickets will be different 
+            // After each sorting, the list of tickets will be different 
             let ticketList = [
                 { "id": "1858306", "price": "72.0", "section": "PR15", "row": "4", "avail": "2", "qty": "2", "notes": "rien" },
                 { "id": "1858302", "price": "76.0", "section": "PR15", "row": "3", "avail": "2", "qty": "2", "notes": "rien" }, 
@@ -77,13 +81,14 @@
                 { "id": "1845517", "price": "117.0", "section": "PR13", "row": "1", "avail": "2,4", "qty": "4", "notes": "rien" }
             ];
 
-            // 2. And after each sorting I need change the value of the "var DATA_TICKTES = ..."
+            // And after each sorting I need change the value of the "var DATA_TICKTES = ..."
             Stadium.setSeatmap(ticketList); 
 
-            // 3. After that I need to update the map with new ticketList
+            // After that I need to update the map with new ticketList
             Stadium.updateSeatmap();
 
         </script>
+
     </body>
 
 </html>
