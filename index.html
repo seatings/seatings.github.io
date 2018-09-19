@@ -16,12 +16,15 @@
 </head>
 
     <body>
-        <h1>В отдельной функции</h1>
+        <h1>**</h1>
         <div id="seatmap-container"></div>
         <div id="seatmap-container-key"></div>
         <div id="tickets-container"></div>
 
         <script>
+            var DATA_TICKTES = {
+                "list": []
+            };
 
             let dataTickets = [
                 { "id": "1858306", "price": "72.0", "section": "PR15", "row": "4", "avail": "2", "qty": "2", "notes": "rien" },
@@ -303,9 +306,7 @@
 
 
             function setDataTickets(dataTickets) {
-                var DATA_TICKTES = {
-                    "list": dataTickets
-                };
+                DATA_TICKTES.list = dataTickets;
             }
 
 
