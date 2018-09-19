@@ -97,13 +97,25 @@
                 { "id": "455663499", "price": "179.0", "section": "119", "row": "1", "avail": "2", "qty": "2", "notes": "rien" }, 
             ];
             
-            setTimeout(function() { console.log('Привет1') }, 3000);
-            setTimeout(function() { console.log('Привет2') }, 3000);
-            setTimeout(function() {console.log('Привет3') }, 3000);
+            // начать повторы с интервалом 2 сек
+            var timerId = setInterval(function() {
+                alert( "тик" );
+            }, 2000);
+            
+            // через 5 сек остановить повторы
+            setTimeout(function() {
+                clearInterval(timerId);
+                alert( 'стоп' );
+            }, 5000);
 
-            Seatmap.setDataTickets(dataTickets1);
-            Seatmap.setDataTickets(dataTickets2);
-            Seatmap.setDataTickets(dataTickets3);
+
+            setTimeout("alert('Привет1')", 3000);
+            setTimeout("alert('Привет2')", 3000);
+            setTimeout("alert('Привет3')", 3000);
+
+            Seatmap.setDataTickets(ticketList1);
+            Seatmap.setDataTickets(ticketList2);
+            Seatmap.setDataTickets(ticketList3);
 
         </script>
     </body>
