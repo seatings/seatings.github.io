@@ -16,7 +16,7 @@
 </head>
 
     <body>
-        <h1>*******</h1>
+        <h1>**** ****</h1>
         <div id="seatmap-container"></div>
         <div id="seatmap-container-key"></div>
         <div id="tickets-container"></div>
@@ -50,6 +50,10 @@
         <script src="https://dynamicvenuemaps.com/maps/dvm.js?v=1.0"></script>
 
         <script>
+            function setDataTickets(dataTickets) {
+                DATA_TICKTES.list = dataTickets;
+            }
+
             let dataTickets1 = [
                 { "id": "1858306", "price": "72.0", "section": "PR15", "row": "4", "avail": "2", "qty": "2", "notes": "rien" },
                 { "id": "1858302", "price": "76.0", "section": "PR15", "row": "3", "avail": "2", "qty": "2", "notes": "rien" }, 
@@ -327,9 +331,7 @@
                 { "id": "499918560", "price": "28.0", "section": "332", "row": "9", "avail": "1,2,3,4,5,6,8", "qty": "8", "notes": "rien" }
             ];
 
-            function setDataTickets(dataTickets) {
-                DATA_TICKTES.list = dataTickets;
-            }
+
 
 
 
@@ -345,7 +347,7 @@
             { "id": "502944762", "price": "28.0", "section": "314", "row": "10", "avail": "2,4", "qty": "4", "notes": "rien" }, 
             { "id": "499918560", "price": "28.0", "section": "332", "row": "9", "avail": "1,2,3,4,5,6,8", "qty": "8", "notes": "rien" }
         ];
-
+            setDataTickets(dataTickets1);
             setDataTickets(dataTickets2);
 
         </script>
