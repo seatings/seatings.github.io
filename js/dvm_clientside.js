@@ -2,29 +2,13 @@
 function client_dvm_initialize_filters_inputs() {
     $("#filter_qty").val(""), $("#filter_min_price").val(""), $("#filter_max_price").val("")
 }
+
 function sel_tri(t,v) {
     alert('выбран билет: ', v.value);
 	console.log('выбран билет: ');
-//  vtri = document.getElementById("formlist").elements.seltri.value,
-//          param = "EventID=" + t + "&tri=" + vtri, sortqty = document.getElementById("formlist").elements.qtytri2.value,
-//          sortminp = document.getElementById("formlist").elements.minprice2.value,
-//          sortmaxp = document.getElementById("formlist").elements.maxprice2.value,
-//          "all" != sortqty && (param = param + "&sortqty=" + sortqty),
-//          "nomin" != sortminp && (param = param + "&sortminp=" + sortminp), 
-//          "nomax" != sortmaxp && (param = param + "&sortmaxp=" + sortmaxp),
-//          compar = document.getElementById("formlist").elements.compar.value,
-//          "" != compar && (param = param + "&ticketscomp=" + compar), 
-//          section = document.getElementById("formlist").elements.sectionsrt.value,
-//          "" != section && (param = param + "&section=" + section),
-//          param2 = param + "&val=nbr", client_dvm_reset_maps(!0),
-//          ajax("new_listing/ajax_list_dvm.php", param, "tickets2")
-
-    
 }
+
 function client_dvm_arg_filter(t) {
-    //console.log(dvm_ticket_ids_by_filters(t));
-//    $("#" + tickets_container + " .rowTicket").hide();
-//    exit();
     if (is_static_map || (dvm_map_filter(t), list_ticket_id_filtred = dvm_ticket_ids_by_filters(t)), list_ticket_id_filtred && list_ticket_id_filtred.length > 0) {
         $("#" + tickets_container + " .rowTicket").hide();
        // alert('okk');
@@ -105,36 +89,4 @@ filter_vals = [], filter_vals.filter_min_price = $("#filter_min_price").val(), f
 }), $("#filters_orange").on("change", "#filter_max_price", function () {
    filter_vals = [], filter_vals.filter_min_price = $("#filter_min_price").val(), filter_vals.filter_max_price = $("#filter_max_price").val(), filter_vals.filter_qty = $("#filter_qty").val(), client_dvm_arg_filter(filter_vals)
 });
-//$('input[type="checkbox"]').change(function(){
-//console.log( '------------'+$( this ).val() ) ;
-//});
-//
 
-//
-//$('input[type=checkbox]').change(function() {
-//var input = $( this );
-//console.log( '------km------'+input )
-//$( "p" ).html(
-//".attr( \"checked\" ): <b>" + $input.attr( "checked" ) + "</b><br>" +
-//".prop( \"checked\" ): <b>" + $input.prop( "checked" ) + "</b><br>" +
-//".is( \":checked\" ): <b>" + $input.is( ":checked" ) ) + "</b>";
-//}).change();
-//-------------------------------------------------------------------------
-// $('#check4').onClick(function() {
-//console.log('-----------okk-----'+$(this).is(':checked'));
-//        //$('#check4').val($(this).is(':checked'));
-//    });
-// $("#" + DVM_map_params.tickets_container + " input[type=checkbox]").click(function () {
-////var $input = $( this );
-//console.log('-----------okk-----');
-//console.log($( this ));
-//});
-// $("#" + DVM_map_params.tickets_container + "input[type=checkbox]:checked").each( 
-//    function() { 
-//        console.log('-----------okk-----');
-//console.log($( this ).attr("id"));
-//       // InsГ©rer son code ici
-//      // alert($(this).attr("id"));
-//    } 
-//);
-//-------------------------------------------------------------------------
